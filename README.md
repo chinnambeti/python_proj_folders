@@ -1,5 +1,22 @@
 # RAG Application Folder Structure
 
+# Update create_genai_proj_folders.sh by replacing the word "one" with name of your choice
+
+# Follow the shell script run commands below on commandline 
+
+$ chmod +x /home/madhu/ragtest/create_genai_proj_folders.sh
+$ ./create_genai_proj_folders.sh
+
+# This will create a folder structure as listed below and also a docker skeleton file for your testing of app.py 
+
+# Build the Docker image
+docker build -t genai_proj_one .
+
+# Run the Docker container
+docker run -p 4000:5999 genai_proj_one
+
+########################## From this point below, it is informational ###########################
+
 ```
 genai_proj_one/
 ├── data/
@@ -82,7 +99,7 @@ docker-compose down
 
 # Just basic code for app.py
 
-#### Copy this code to app.py to test the skeleten of this and change the port of your choice that is available ####
+#### This code is automatically copied to the app.py when shell script is run ####
 
 # app.py
 from flask import Flask
@@ -95,3 +112,5 @@ def hello_world():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5999)
+
+############################# End of the Readme file #################################
