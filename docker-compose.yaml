@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+    rag_proj_milvus:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "4000:5999"
