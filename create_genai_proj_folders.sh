@@ -5,6 +5,12 @@
 # This script creates project directories and files for genai_proj_one.
 # Replace all "one" with your project name. 
 
+# Delete the genai_proj_one directory if it exists 
+if [ -d genai_proj_one ]; then
+    rm -rf genai_proj_one
+    echo "genai_proj_one deleted"
+fi
+
 # Delete the requirements.txt file if it exists
 if [ -f requirements.txt ]; then
     rm requirements.txt
